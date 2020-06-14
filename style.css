@@ -1,0 +1,85 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+header {
+    background-color: darkblue;
+    color: #fff;
+    text-align: center;
+    font-family: Halvetica sans-serif;
+}
+/*
+#camera{
+    position: absolute;
+    height: 85%;
+    width: 600px;
+    object-fit: cover;
+}
+*/
+main {
+  background: #ffffff;
+  min-height: 48vh;
+}
+#camera--canvas{
+    position:absolute;
+    height: 1%;
+    width: 1%;
+    object-fit:none;
+    display: none;
+    border: 50px;
+}
+#camera--view {
+  width: 85%;
+  max-width: 600px;
+  display:block;
+  margin: 0 auto;
+  border-radius: 30px;
+  border-color: darkblue;
+}
+#camera--output{
+    position: fixed;
+/*
+    height: 100%;
+    width: 100%;
+*/
+}
+#camera--view, #camera--canvas, #camera--output{
+    transform: scaleX(-1);
+    filter: FlipH;
+}
+#camera--button{
+    width: 200px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    border-radius: 30px;
+    border: none;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+    position:relative;
+/*    bottom: 20px;*/
+    left: calc(50% - 100px);
+}
+.taken{
+    height: 720px!important;
+    width: 1280px!important;
+    transition: all 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+    border: solid 3px darkblue;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+    top: 55px;
+    right: 20px;
+    z-index: 1;
+    display: none;
+}
+footer {
+    background-color: darkblue;
+    color: #fff;
+    text-align: center;
+    font-family: Halvetica sans-serif;
+}
